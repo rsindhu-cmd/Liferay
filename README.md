@@ -1,2 +1,2 @@
 # Liferay
-Lifeeay
+Liferay
