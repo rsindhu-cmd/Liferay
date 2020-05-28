@@ -1,5 +1,5 @@
 
-FROM ubuntu:18.04
+FROM ubuntu:xenial
 
 # Install Java 8 JDK
 RUN apt-get update && \  
