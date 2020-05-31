@@ -5,7 +5,7 @@
 ##
 
 # Set the base image to ubuntu
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
 # Install Java 8 JDK
 RUN apt-get update && \
@@ -21,13 +21,13 @@ ENV JRE_HOME=$JAVA_HOME/jre
 ENV PATH=$PATH:$JAVA_HOME/bin
 
 #create the folder to contain bundled Liferay tomcat files, it is an absolute path
-RUN mkdir -p /usr/liferay/docker/appserver/LR-CE-PORTAL-7.0-GA3
+RUN mkdir -p /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3
 
 #Copy the LR tomcat bundle folders/files to container
-COPY LR-CE-PORTAL-7.0-GA3/ /usr/liferay/docker/appserver/LR-CE-PORTAL-7.0-GA3/
+COPY /home/devops/liferay-ce-portal-tomcat-7.3.2-ga3 /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3/
 
 #MAKE the whole Tomcat folder as the mounted directory
-VOLUME /usr/liferay/docker/appserver/LR-CE-PORTAL-7.0-GA3
+VOLUME /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3
 
 # Expose port 8080
 EXPOSE 8080
