@@ -10,7 +10,7 @@ FROM ubuntu:18.04
 # Install Java 8 JDK
 RUN apt-get update && \
    # apt-get upgrade -y && \
-    sudo apt-get install openjdk-8-jdk -y
+     apt-get install openjdk-8-jdk -y
    # apt-get install -y  software-properties-common && \
     # add-apt-repository ppa:webupd8team/java -y && \
    # apt-get update && \
