@@ -25,7 +25,7 @@ ENV PATH=$PATH:$JAVA_HOME/bin
 RUN mkdir -p /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3
 
 #Copy the LR tomcat bundle folders/files to container
-COPY /home/devops/liferay-ce-portal-tomcat-7.3.2-ga3 /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3/
+COPY liferay-ce-portal-tomcat-7.3.2-ga3 /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3/
 
 #MAKE the whole Tomcat folder as the mounted directory
 VOLUME /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3
