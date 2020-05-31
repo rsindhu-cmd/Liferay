@@ -31,4 +31,11 @@ COPY liferay-ce-portal-tomcat-7.3.2-ga3 /usr/liferay/docker/appserver/liferay-ce
 VOLUME /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3
 
 # Expose port 8080
-EXPOSE 8080
+EXPOSE 8080 8443
+
+WORKDIR /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3/tomcat-9.0.33/bin
+
+RUN chmod 777 startup.sh
+
+CMD ["./startup.sh"]
+
