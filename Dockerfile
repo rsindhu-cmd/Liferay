@@ -17,7 +17,7 @@ RUN apt-get update && \
   #  echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
   #  apt-get install -y oracle-java8-installer && \
  #   apt-get clean
-ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV JRE_HOME=$JAVA_HOME/jre
 ENV PATH=$PATH:$JAVA_HOME/bin
 
