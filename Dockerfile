@@ -22,13 +22,13 @@ ENV JRE_HOME=$JAVA_HOME/jre
 ENV PATH=$PATH:$JAVA_HOME/bin
 
 #create the folder to contain bundled Liferay tomcat files, it is an absolute path
-RUN mkdir -p /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3
+RUN mkdir -p /usr/liferay/docker/appserver/liferay-ce-portal-7.0-ga3
 
 #Copy the LR tomcat bundle folders/files to container
-COPY liferay-ce-portal-tomcat-7.3.2-ga3 /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3/
+COPY liferay-ce-portal-7.0-ga3 /usr/liferay/docker/appserver/liferay-ce-portal-7.0-ga3/
 
 #MAKE the whole Tomcat folder as the mounted directory
-VOLUME /usr/liferay/docker/appserver/liferay-ce-portal-tomcat-7.3.2-ga3
+VOLUME /usr/liferay/docker/appserver/liferay-ce-portal-7.0-ga3
 
 # Expose port 8080
 EXPOSE 8080 8443
